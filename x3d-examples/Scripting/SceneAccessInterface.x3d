@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D profile='Immersive' version='3.3' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.3.xsd'>
+	<!-- Imagine what HTML & SVG did in 2D space, what X3D will do in 3D space! -->
+	<head>
+		<meta content='SceneAccessInterface.x3d' name='title'/>
+		<meta content='Gerallt Franke' name='creator'/>
+		<meta content='23 July 2016' name='modified'/>
+		
+		<Script>
+			<![CDATA[
+				function initilize()
+				{
+					console.log('initilizing scene');
+				}
+				function shutdown()
+				{
+					console.log('scene shutdown');
+				}
+				function showBrowserInfo()
+				{
+					var info = '';
+					
+					info = browser.getName();
+					
+					browser.print(info);
+				}
+				
+				showBrowserInfo();
+				
+				// All scripts within head, or not under header are compiled and executed once
+				// The onRenderFrame() function definition is executed multiple times - every frame
+			]]>
+		</Script>
+	</head>
+    <Scene>
+		<!-- Empty scene -->
+		
+		<Script>
+		<![CDATA[
+
+			function onRenderFrame(e) 
+			{
+				// This script is executed every frame
+			}
+		
+		]]>
+		</Script>
+	</Scene>
+</X3D>

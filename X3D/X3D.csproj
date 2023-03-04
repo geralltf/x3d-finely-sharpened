@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0742E4E9-D1BA-41F1-B161-33CD3A3D4D33}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>X3D</RootNamespace>
+    <AssemblyName>X3D</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OpenTK\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OpenTK\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="V8.Net, Version=1.5.2015.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\X3DRuntime\bin\Debug\V8.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="V8.Net.SharedTypes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\X3DRuntime\bin\Debug\V8.Net.SharedTypes.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="X3D\Core\Appearance.cs" />
+    <Compile Include="X3D\Core\Background.cs" />
+    <Compile Include="X3D\Core\RigidBodyPhysics\Physics.cs" />
+    <Compile Include="X3D\Core\RigidBodyPhysics\RigidBody.cs" />
+    <Compile Include="X3D\Core\UVSphere.cs" />
+    <Compile Include="X3D\Core\Rectangle2D.cs" />
+    <Compile Include="X3D\Core\Box.cs" />
+    <Compile Include="X3D\Core\PointSet.cs" />
+    <Compile Include="X3D\Core\LineSet.cs" />
+    <Compile Include="X3D\Core\IndexedLineSet.cs" />
+    <Compile Include="X3D\Core\Interpolation\X3DInterpolatorNode.cs" />
+    <Compile Include="X3D\Core\Interpolation\ColorInterpolator.cs" />
+    <Compile Include="X3D\Core\Group.cs" />
+    <Compile Include="X3D\Core\IntegerSequencer.cs" />
+    <Compile Include="X3D\Core\Prototyping\fieldValue.cs" />
+    <Compile Include="X3D\Core\Prototyping\IS.cs" />
+    <Compile Include="X3D\Core\NavigationInfo.cs" />
+    <Compile Include="X3D\Core\Prototyping\ProtoBody.cs" />
+    <Compile Include="X3D\Core\Prototyping\ProtoDeclare.cs" />
+    <Compile Include="X3D\Core\Prototyping\ProtoInstance.cs" />
+    <Compile Include="X3D\Core\Shading\BuiltIn\CrosshairShader.cs" />
+    <Compile Include="X3D\Core\Shading\BuiltIn\ColorDiscardShader.cs" />
+    <Compile Include="X3D\Core\Shading\BuiltIn\CubeMapBackgroundShader.cs" />
+    <Compile Include="X3D\Core\Shading\BuiltIn\BackgroundShader.cs" />
+    <Compile Include="X3D\Core\Shading\BuiltIn\MaterialShader.cs" />
+    <Compile Include="X3D\Core\Shading\GeometryHandle.cs" />
+    <Compile Include="X3D\Core\Shading\PackedGeometry.cs" />
+    <Compile Include="X3D\Core\Shading\ShaderMaterial.cs" />
+    <Compile Include="X3D\Core\IcoSphere.cs" />
+    <Compile Include="X3D\Core\StaticGroup.cs" />
+    <Compile Include="X3D\Core\Switch.cs" />
+    <Compile Include="X3D\Core\Text.cs" />
+    <Compile Include="X3D\Core\TextureBackground.cs" />
+    <Compile Include="X3D\Core\TimeSensor.cs" />
+    <Compile Include="X3D\Core\ViewpointGroup.cs" />
+    <Compile Include="X3D\Engine\ConstructionSet\Delegates.cs" />
+    <Compile Include="X3D\Engine\ConstructionSet\IConstructionSet.cs" />
+    <Compile Include="X3D\Engine\ConstructionSet\IElevationBuilder.cs" />
+    <Compile Include="X3D\Engine\ConstructionSet\IHeightMapGenerator.cs" />
+    <Compile Include="X3D\Engine\ConstructionSet\IPerlinNoiseTexture.cs" />
+    <Compile Include="X3D\Engine\Delegates.cs" />
+    <Compile Include="X3D\Engine\Enums.cs" />
+    <Compile Include="X3D\Engine\EventGraph.cs" />
+    <Compile Include="X3D\Engine\EventRoute.cs" />
+    <Compile Include="X3D\Engine\SceneCamera.cs" />
+    <Compile Include="X3D\Engine\Consts.cs" />
+    <Compile Include="X3D\Engine\Crosshair.cs" />
+    <Compile Include="X3D\Engine\SceneEntity.cs" />
+    <Compile Include="X3D\Engine\Scripting\BrowserFunction.cs" />
+    <Compile Include="X3D\Engine\Scripting\ScriptingEngine.cs" />
+    <Compile Include="X3D\Engine\Scripting\WindowFunction.cs" />
+    <Compile Include="X3D\Core\Shading\ComposedShader.cs" />
+    <Compile Include="X3D\Core\Cone.cs" />
+    <Compile Include="X3D\Core\Cylinder.cs" />
+    <Compile Include="X3D\Core\ElevationGrid.cs" />
+    <Compile Include="X3D\Core\ImageTexture.cs" />
+    <Compile Include="X3D\Core\IndexedFaceSet.cs" />
+    <Compile Include="X3D\Core\IndexedTriangleSet.cs" />
+    <Compile Include="X3D\Core\Material.cs" />
+    <Compile Include="X3D\Engine\RenderingContext.cs" />
+    <Compile Include="X3D\Core\Prototyping\field.cs" />
+    <Compile Include="X3D\Core\Shading\ShaderPart.cs" />
+    <Compile Include="X3D\Core\Shading\ShaderCompiler.cs" />
+    <Compile Include="X3D\Core\Shape.cs" />
+    <Compile Include="X3D\Engine\ShapeGeometry.cs" />
+    <Compile Include="X3D\Core\Sphere.cs" />
+    <Compile Include="X3D\Core\Transform.cs" />
+    <Compile Include="X3D\Core\Viewpoint.cs" />
+    <Compile Include="X3D\Core\X3D.cs" />
+    <Compile Include="X3D\Engine\SceneGraphNode.cs" />
+    <Compile Include="X3D\Engine\View.cs" />
+    <Compile Include="X3D\Engine\Scripting\X3DConsole.cs" />
+    <Compile Include="X3D\Core\Extrusion.cs" />
+    <Compile Include="X3D\Math\BoundingBox.cs" />
+    <Compile Include="X3D\Math\Imaging.cs" />
+    <Compile Include="X3D\Math\Matrix.cs" />
+    <Compile Include="X3D\Math\Quaternions.cs" />
+    <Compile Include="X3D\Math\Vectors.cs" />
+    <Compile Include="X3D\Parser\X3DBinaryCompression.cs" />
+    <Compile Include="X3D\Parser\X3DBinaryEncoders.cs" />
+    <Compile Include="X3D\Parser\X3DRuntimeValidator.cs" />
+    <Compile Include="X3D\Parser\X3DSceneGraphXMLSerializer.cs" />
+    <Compile Include="X3D\Parser\X3DTypeConverters.cs" />
+    <Compile Include="X3D\Math\MathHelpers.cs" />
+    <Compile Include="X3D\Math\Matricies.cs" />
+    <Compile Include="X3D\Core\Shading\Buffering.cs" />
+    <Compile Include="X3D\Core\Shading\BuiltIn\DefaultShader.cs" />
+    <Compile Include="X3D\Core\Shading\DefaultUniforms.cs" />
+    <Compile Include="X3D\Core\Shading\BuiltIn\QuadTessShader.cs" />
+    <Compile Include="X3D\Core\Shading\BuiltIn\TriangleTessShader.cs" />
+    <Compile Include="X3D\Engine\Vertex.cs" />
+    <Compile Include="X3D\Core\Script.cs" />
+    <Compile Include="X3D\Platform\Platform.cs" />
+    <Compile Include="X3D\x3d-3.3.Designer.cs" />
+    <Compile Include="X3D\Parser\XMLParser.cs" />
+    <Compile Include="X3D\Engine\SceneGraph.cs" />
+    <Compile Include="X3D\Engine\Runtime.cs" />
+    <Compile Include="X3D\BuildSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="X3D\Engine\SceneManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\crosshair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ErrorTexture.png" />
+    <None Include="X3D\x3d-3.3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="X3D\x3d-3.3-Web3dExtensionsPrivate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="X3D\x3d-3.3-Web3dExtensionsPublic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BinaryCompression\BinaryCompression.csproj">
+      <Project>{8986b478-578a-4825-997d-9b53b8034e43}</Project>
+      <Name>BinaryCompression</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_AssemblyInfoFilename="" BuildVersion_UseGlobalSettings="False" BuildVersion_IncrementBeforeBuild="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
